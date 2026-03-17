@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* [SEU CSS ORIGINAL PERMANECE IGUAL] */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease; }
         :root { --bg-body: #f8fafc; --bg-surface: #ffffff; --bg-card: #ffffff; --text-primary: #0f172a; --text-secondary: #334155; --text-muted: #64748b; --accent: #8b5cf6; --accent-hover: #7c3aed; --border: #e2e8f0; --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02); --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.15); --navbar-bg: rgba(255, 255, 255, 0.8); --header-bg: linear-gradient(145deg, #f1f5f9 0%, #e6edf5 100%); --footer-bg: #e6edf5; }
         body.dark { --bg-body: #0b1120; --bg-surface: #1e293b; --bg-card: #1e293b; --text-primary: #f1f5f9; --text-secondary: #cbd5e1; --text-muted: #94a3b8; --accent: #a78bfa; --accent-hover: #b794f4; --border: #334155; --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); --shadow-hover: 0 20px 30px -10px #00000066; --navbar-bg: rgba(30, 41, 59, 0.8); --header-bg: linear-gradient(145deg, #1e293b 0%, #0f172a 100%); --footer-bg: #0f172a; }
@@ -33,8 +32,6 @@
         .filter-tabs { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 2rem 0 1rem; }
         .filter-btn { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 40px; padding: 0.6rem 1.5rem; font-weight: 600; font-size: 0.95rem; color: var(--text-secondary); cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow); }
         .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
-        .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .filter-btn.active:hover { color: white; }
         .featured { margin: 3rem 0 3rem; }
         .featured-card { display: flex; flex-wrap: wrap; background: var(--bg-card); border-radius: 2rem; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); transition: box-shadow 0.3s; }
         .featured-card:hover { box-shadow: var(--shadow-hover); }
@@ -43,8 +40,6 @@
         .featured-badge { background: var(--accent); color: white; padding: 0.3rem 1rem; border-radius: 40px; font-size: 0.85rem; font-weight: 600; width: fit-content; margin-bottom: 1rem; }
         .featured-content h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3; }
         .featured-content p { color: var(--text-secondary); margin-bottom: 1.8rem; font-size: 1.1rem; }
-        .btn { background: var(--accent); border: none; padding: 0.9rem 2rem; border-radius: 40px; color: white; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: background 0.2s, transform 0.1s; box-shadow: 0 6px 14px rgba(139, 92, 246, 0.3); }
-        .btn:hover { background: var(--accent-hover); transform: scale(1.02); }
         .section-title { font-size: 2rem; font-weight: 600; margin-bottom: 1.8rem; letter-spacing: -0.02em; }
         .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
         .post-card { background: var(--bg-card); border-radius: 1.5rem; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); transition: all 0.3s; display: flex; flex-direction: column; }
@@ -56,8 +51,6 @@
         .card-excerpt { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6; flex: 1; }
         .card-meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1.2rem; margin-top: auto; }
         .read-more { color: var(--accent); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; }
-        .read-more i { transition: transform 0.2s; }
-        .read-more:hover i { transform: translateX(4px); }
         .post-date { color: var(--text-muted); font-size: 0.9rem; }
         .footer { background: var(--footer-bg); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 3rem; }
         .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
@@ -65,7 +58,7 @@
         .social-links { display: flex; gap: 1.8rem; }
         .social-links a { color: var(--text-secondary); font-size: 1.4rem; transition: color 0.2s; }
         .social-links a:hover { color: var(--accent); }
-        @media (max-width: 640px) { .container { padding: 0 1.5rem; } .page-header h1 { font-size: 2rem; } .featured-content { padding: 1.8rem; } .featured-content h2 { font-size: 1.8rem; } .navbar .container { flex-wrap: wrap; gap: 1rem; } .nav-links { gap: 1.2rem; } }
+        @media (max-width: 640px) { .container { padding: 0 1.5rem; } .page-header h1 { font-size: 2rem; } .featured-content { padding: 1.8rem; } .navbar .container { flex-wrap: wrap; gap: 1rem; } .nav-links { gap: 1.2rem; } }
     </style>
 </head>
 <body>
@@ -108,21 +101,20 @@
                 <div class="featured-content">
                     <span class="featured-badge"><i class="fas fa-star" style="margin-right: 6px;"></i>Destaque</span>
                     <h2>A Magia do Cinema Automatizado</h2>
-                    <p>Descubra como a IA está transformando a criação de conteúdo para blogs e portais de notícias em tempo real.</p>
+                    <p>Conteúdo gerado em tempo real por inteligência artificial.</p>
                 </div>
             </div>
         </section>
 
         <section>
             <h2 class="section-title">Artigos <span style="color: var(--accent);">recentes</span></h2>
-            <div class="posts-grid" id="postsGrid">
-                </div>
+            <div class="posts-grid" id="postsGrid"></div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-copy">© 2025 CineBlog — Feito com <i class="fas fa-heart" style="color: #f43f5e;"></i> para fãs de séries e filmes</div>
+            <div class="footer-copy">© 2025 CineBlog — Feito para fãs de séries e filmes</div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -142,55 +134,49 @@
             let currentFilter = 'all';
             let searchTerm = '';
 
-            // --- NOVIDADE: CARREGA POSTS DO ARQUIVO JSON EXTERNO ---
             async function fetchPosts() {
                 try {
-                    // O n8n vai atualizar este arquivo posts.json no seu GitHub
-                    const response = await fetch('posts.json');
-                    allPosts = await response.json();
+                    // Adicionado ?t= para evitar cache do GitHub Pages
+                    const response = await fetch('posts.json?t=' + Date.now());
+                    const data = await response.json();
+                    
+                    // Tratamento para garantir que pegamos a lista correta, independente do formato do n8n
+                    allPosts = Array.isArray(data) ? data : (data.conteudo_final ? JSON.parse(data.conteudo_final) : []);
+                    
                     filterPosts();
                 } catch (error) {
                     console.error("Erro ao carregar posts.json:", error);
-                    grid.innerHTML = "<p>Erro ao carregar os artigos. Verifique se posts.json existe.</p>";
+                    grid.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Erro ao carregar os artigos. Verifique se posts.json existe.</p>";
                 }
             }
 
             function renderPosts(filteredPosts) {
                 if (!grid) return;
                 if (filteredPosts.length === 0) {
-                    grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:3rem; background:var(--bg-surface); border-radius:2rem; border:1px solid var(--border);">
-                        <i class="fas fa-film" style="font-size:3rem; color:var(--text-muted); margin-bottom:1rem;"></i>
-                        <p style="color:var(--text-muted);">Nenhum post encontrado 😢</p>
-                    </div>`;
+                    grid.innerHTML = `<p style="grid-column: 1/-1; text-align:center;">Nenhum post encontrado 😢</p>`;
                     return;
                 }
 
-                let html = '';
-                filteredPosts.forEach(post => {
-                    html += `
-                        <article class="post-card">
-                            <div class="card-img" style="background-image: url('${post.image || 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=250&fit=crop'}');">
-                                <span class="card-category">${post.category === 'filme' ? '🎬 Filme' : '📺 Série'}</span>
+                grid.innerHTML = filteredPosts.map(post => `
+                    <article class="post-card">
+                        <div class="card-img" style="background-image: url('${post.image || ''}');">
+                            <span class="card-category">${post.category === 'filme' ? '🎬 Filme' : '📺 Série'}</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">${post.title.replace('\\n', '')}</h3>
+                            <p class="card-excerpt">${post.excerpt.replace('\\n', '')}</p>
+                            <div class="card-meta">
+                                <a href="${post.url}" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
+                                <span class="post-date">${post.date}</span>
                             </div>
-                            <div class="card-content">
-                                <h3 class="card-title">${post.title}</h3>
-                                <p class="card-excerpt">${post.excerpt}</p>
-                                <div class="card-meta">
-                                    <a href="${post.url}" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
-                                    <span class="post-date"><i class="far fa-calendar-alt" style="margin-right: 4px;"></i>${post.date}</span>
-                                </div>
-                            </div>
-                        </article>
-                    `;
-                });
-                grid.innerHTML = html;
+                        </div>
+                    </article>
+                `).join('');
             }
 
             function filterPosts() {
                 let filtered = allPosts;
-                if (currentFilter !== 'all') {
-                    filtered = filtered.filter(p => p.category === currentFilter);
-                }
+                if (currentFilter !== 'all') filtered = filtered.filter(p => p.category === currentFilter);
                 if (searchTerm.trim() !== '') {
                     const term = searchTerm.trim().toLowerCase();
                     filtered = filtered.filter(p => p.title.toLowerCase().includes(term));
@@ -198,7 +184,6 @@
                 renderPosts(filtered);
             }
 
-            // Eventos de Filtro e Busca
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => b.classList.remove('active'));
@@ -211,16 +196,13 @@
             searchBtn.addEventListener('click', () => { searchTerm = searchInput.value; filterPosts(); });
             searchInput.addEventListener('keyup', (e) => { if (e.key === 'Enter') { searchTerm = searchInput.value; filterPosts(); } });
 
-            // Iniciar carregamento
             fetchPosts();
 
-            // Dark Mode Logic
             const themeToggle = document.getElementById('themeToggle');
-            const body = document.body;
-            if (localStorage.getItem('theme') === 'dark') body.classList.add('dark');
+            if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
             themeToggle.addEventListener('click', () => {
-                body.classList.toggle('dark');
-                localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+                document.body.classList.toggle('dark');
+                localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
             });
         })();
     </script>
